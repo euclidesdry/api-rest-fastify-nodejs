@@ -1,8 +1,7 @@
 import fastify from "fastify";
 
+import { env } from "./env";
 import { knex } from "./database";
-
-const SERVER_PORT = Number(process.env.PORT) || 3333;
 
 const app = fastify();
 
@@ -14,6 +13,6 @@ app.get("/hello", async () => {
   return transaction;
 });
 
-app.listen({ port: SERVER_PORT }).then(() => {
-  console.log(`HTTP Server is running on port \x1b[32m${SERVER_PORT}\x1b[36m`);
+app.listen({ port: env.PORT }).then(() => {
+  console.log(`HTTP Server is running on port \x1b[32m${env.PORT}\x1b[36m`);
 });
