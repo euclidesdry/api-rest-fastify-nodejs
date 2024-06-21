@@ -8,6 +8,12 @@ import { transactionsRoutes } from "./routes/transactions";
 const app = fastify();
 
 app.register(cookie);
+
+// Global middlewares
+// app.addHook("preHandler", async (request, reply) => {
+//   console.log(`Route ${request.method} ${request.url}`);
+// });
+
 app.register(transactionsRoutes, {
   prefix: "transactions",
 });
