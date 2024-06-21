@@ -50,7 +50,7 @@ web_modules/
 
 # Optional npm cache directory
 .npm
-tmp/app.db
+db/app.db
 
 # Optional eslint cache
 .eslintcache
