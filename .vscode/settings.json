@@ -1,0 +1,10 @@
+{
+  "cSpell.words": [
+    "fastify",
+    "rocketseat",
+    "sqlite"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  }
+}
