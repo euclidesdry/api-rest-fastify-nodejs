@@ -25,6 +25,7 @@
   "author": "Euclides do Rosário <euclidesdry@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@fastify/cookie": "^9.3.1",
     "dotenv": "^16.4.5",
     "fastify": "^4.28.0",
     "knex": "^3.1.0",

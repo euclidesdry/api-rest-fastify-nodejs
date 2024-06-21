@@ -39,6 +39,17 @@ export async function transactionsRoutes(app: FastifyInstance) {
       type: z.enum(["credit", "debt"]),
     });
 
+    let sessionId = request.cookies.sessionId;
+
+    if (!sessionId) {
+      sessionId = randomUUID();
+
+      reply.setCookie("sessionId", sessionId, {
+        path: "/",
+        maxAge: 60 * 60 * 24 * 7, // 60s * 60min * 24h * 7d
+      });
+    }
+
     const { title, amount, type } = createTransactionBodySchema.parse(
       request.body,
     );
@@ -47,6 +58,7 @@ export async function transactionsRoutes(app: FastifyInstance) {
       id: randomUUID(),
       title,
       amount: type === "credit" ? amount : -1,
+      session_id: sessionId,
     });
 
     reply.status(201).send();
