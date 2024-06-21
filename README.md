@@ -6,14 +6,14 @@
 
 ### Functional Requirements
 
-- [ ] User should create a new transaction (credit, debt);
-- [ ] User should get his account transaction details;
-- [ ] User should list all occurred transactions;
-- [ ] User should visualize a unique transaction.
+- [x] User should create a new transaction (credit, debt) [POST/transactions];
+- [x] User should list all occurred transactions [GET/transactions];
+- [x] User should visualize a unique transaction [GET/transactions/:id];
+- [x] User should get his account transaction details/summary [GET/transactions/summary].
 
 ### Business Rule
 
-- [ ] Transactions should be of types: Credit total value or Subtraction of Debt;
+- [x] Transactions should be of types: Credit total value or Subtraction of Debt;
 - [ ] Should be possible identify the User between requisitions (A way to identify the User);
 - [ ] User must only visualize his created transactions.
 
