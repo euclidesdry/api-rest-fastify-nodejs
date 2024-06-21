@@ -8,6 +8,7 @@
     "source.fixAll.eslint": "always"
   },
   "conventionalCommits.scopes": [
-    "routes"
+    "routes",
+    "tests"
   ]
 }
