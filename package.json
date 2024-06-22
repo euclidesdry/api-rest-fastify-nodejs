@@ -2,7 +2,7 @@
   "name": "api-rest-fastify-nodejs",
   "version": "1.0.0",
   "description": "Creating an api using Fastify with NodeJS (Structure, Database, Routes, Tests and Deploy)",
-  "main": "src/server.js",
+  "main": "src/server.ts",
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "start": "tsx src/server.ts",
@@ -10,7 +10,9 @@
     "test": "vitest",
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
-    "knex": "node --no-warnings --import tsx ./node_modules/knex/bin/cli.js"
+    "knex": "node --no-warnings --import tsx ./node_modules/knex/bin/cli.js",
+    "knex:migrate:latest": "knex -- migrate:latest",
+    "knex:migrate:rollback:all": "knex -- migrate:rollback --all"
   },
   "keywords": [
     "tests",
