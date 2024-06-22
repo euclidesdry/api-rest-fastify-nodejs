@@ -3,16 +3,8 @@
   "version": "1.0.0",
   "description": "Creating an api using Fastify with NodeJS (Structure, Database, Routes, Tests and Deploy)",
   "main": "src/server.ts",
-  "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "start": "tsx src/server.ts",
-    "build": "tsup src --out-dir build",
-    "test": "vitest",
-    "lint": "eslint src --ext .ts",
-    "lint:fix": "eslint src --ext .ts --fix",
-    "knex": "node --no-warnings --import tsx ./node_modules/knex/bin/cli.js",
-    "knex:migrate:latest": "knex -- migrate:latest",
-    "knex:migrate:rollback:all": "knex -- migrate:rollback --all"
+  "engines": {
+    "node": ">=18"
   },
   "keywords": [
     "tests",
@@ -26,12 +18,23 @@
   ],
   "author": "Euclides do Rosário <euclidesdry@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "build": "tsup src --out-dir build",
+    "test": "vitest",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "knex": "node --no-warnings --import tsx ./node_modules/knex/bin/cli.js",
+    "knex:migrate:latest": "knex -- migrate:latest",
+    "knex:migrate:rollback:all": "knex -- migrate:rollback --all"
+  },
   "dependencies": {
     "@fastify/cookie": "^9.3.1",
     "dotenv": "^16.4.5",
     "fastify": "^4.28.0",
     "knex": "^3.1.0",
-    "sqlite3": "^5.1.7",
+    "pg": "^8.12.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
@@ -39,6 +42,7 @@
     "@types/node": "^20.14.6",
     "@types/supertest": "^6.0.2",
     "eslint": "^8.57.0",
+    "sqlite3": "^5.1.7",
     "supertest": "^7.0.0",
     "tsup": "^8.1.0",
     "tsx": "^4.15.6",
