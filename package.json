@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "start": "tsx src/server.ts",
-    "build": "tsc",
+    "build": "tsup src --out-dir build",
     "test": "vitest",
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
@@ -40,6 +40,7 @@
     "@types/supertest": "^6.0.2",
     "eslint": "^8.57.0",
     "supertest": "^7.0.0",
+    "tsup": "^8.1.0",
     "tsx": "^4.15.6",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
